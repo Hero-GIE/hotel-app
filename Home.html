@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Hotel</title>
+    
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
+      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    /> 
+    <link rel="stylesheet" href="style.css"/>
+
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body id="home">
+   
+    <section class="head">
+      <div class="container flex1" >
+        <div class="scoial">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+        <div class="logo" style="margin-left: 100px; margin-bottom: 150px;">
+          <img src="./room/image/logo.png" alt="">
+        </div>
+        <div class="address" >
+          <i class="fas fa-map-marker-alt"></i>
+          <span >205 Fida Walinton, Tongo Street Front, USA</span>
+        </div>
+      </div>
+    </section>
+
+  <header class="header" style="position: relative; z-index: 2;" >
+    <div class="container" >
+      <nav class="navbar flex1">
+        <div class="sticky_logo logo">
+          <img src="image/logo.png" alt="">
+        </div>
+
+        <ul class="nav-menu" style="margin-bottom: 16px;">
+          <li> <a href="#">Home</a> </li>
+          <li> <a href="./room/Room.html">Rooms</a> </li>
+          <li> <a href="#services">Services</a> </li>
+          <li> <a href="#testimonials">Testimonials</a> </li>  
+          <li> <a href="#contact">Contact</a> </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <div class="head_contact" style="margin-left: 100px; margin-bottom: 13px;">
+          <i class="fas fa-phone-volume"></i>
+          <span >+000 1234 5678</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobliemmenu);
+
+    function mobliemmenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    window.addEventListener("scroll", function() {
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0)
+    })
+  </script>
+
+    <!-- HOME SECTION -->
+    <section class="home">
+      <div class="content">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <img src="./images/banner-1.png" alt="" style ="z-index: 1;position: relative;" />
+            <div class="text">
+              <h1>Welcome To Luxury Hotel</h1>
+              <p>
+                We offer comfortable and clean accommodations that are perfect
+                for business or leisure travel. We are located nearby many
+                restaurants and shops.
+              </p>
+              <div class="flex">
+                <button
+                  type="button"
+                  class="primary-btn"
+                  data-bs-toggle="modal"
+                  data-bs-target="#myModal"
+                >
+                  MAKE RESERVATION
+                </button>
+                <a href="profile.html"><button type="button"  class="secondary-btn">GUEST PROFILE</button></a>
+                <div class="modal fade" id="myModal" >
+                  <div class="modal-dialog">
+                    <div class="modal-content" >
+                      <div class="modal-header" style="background: #CC8C18;">
+                <h5 class="modal-title">Reservation</h5>
+                        <button
+                          type="button"
+                          class="btn-close"
+                          data-bs-dismiss="modal"
+                        
+                        ></button>
+                      </div>
+                      <div class="modal-body" >
+                        <form class="row g-2" action="">
+                          <div class="row g-2">
+                            <div class="col-md">
+                              <div class="form-floating">
+                                <input type="date" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com">
+                                <label for="floatingInputGrid" style="color: black;">Check-In</label>
+                              </div>
+                            </div>
+                            <div class="col-md">
+                              <div class="form-floating">
+                                <input type="date" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com">
+                                <label for="floatingInputGrid" style="color: black;">Check-Out</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row g-2">
+                            <div class="col-md">
+                              <div class="form-floating">
+                                <input type="number" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com">
+                                <label for="floatingInputGrid" style="color: black;">Adults</label>
+                              </div>
+                            </div>
+                            <div class="col-md">
+                              <div class="form-floating">
+                                <input type="number" class="form-control" id="floatingInputGrid" placeholder="name@example.com" value="mdo@example.com">
+                                <label for="floatingInputGrid" style="color: black;">Children</label>
+                              </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                              <input type="number" class="form-control" id="floatingInput" placeholder="name@example.com">
+                              <label for="floatingInput" style="color: black;">Rooms</label>
+                            </div>
+                          </div>
+                          <button style="margin-top: 30px;background: #CC8C18; color: white;" type="submit" class="primary-btn">Book Now</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./images/banner-2.png" alt="" />
+            <div class="text">
+              <h1>You Are Our Priority</h1>
+              <p>
+                Welcome to Luxury Hotel! We are excited to have you stay with us
+                and hope you have a comfortable and enjoyable visit.
+              </p>
+              <div class="flex">
+                <button  type="button"
+                class="primary-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal">
+                  MAKE RESERVATION
+                </button>
+                <a href="profile.html"><button type="button"  class="secondary-btn"> GUEST PROFILE</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="./images/banner-3.png" alt="" />
+            <div class="text">
+              <h1>Have A Luxurious Life</h1>
+              <p>
+                Throughout your stay, don't hesitate to reach out should you
+                need anything. Our friendly staff members are available night or
+                day to assist you.
+              </p>
+              <div class="flex">
+                <button  type="button"
+                class="primary-btn"
+                data-bs-toggle="modal"
+                data-bs-target="#myModal">
+                  MAKE RESERVATION
+                </button>
+                <a href="profile.html"><button type="button"  class="secondary-btn"> GUEST PROFILE</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
+      integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!--cCAROUSEL 1 -->
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        dots: false,
+        navText: [
+          "<i class = 'fa fa-chevron-left'></i> ",
+          "<i class = 'fa fa-chevron-right'></i>",
+        ],
+        responsive: {
+          0: {
+            items: 1,
+          },
+          700: {
+            items: 1,
+          },
+          1000: {
+            items: 1,
+          },
+        },
+      });
+    </script>
+
+    <!-- CUSTOMER SECTION -->
+    <section class="Customer top">
+      <div class="container">
+        <div class="owl-carousel owl-carousel2 owl-theme">
+          <div class="item">
+            <i class="fa-solid fa-quote-right"></i>
+            <p>
+              "We thoroughly enjoyed our stay. The staffs were always motivated
+              to help us. The food was excellent, the chef ensured that our
+              pallet needs were met. The hotel ambience was lovely & very
+              serene. We look forward to coming back. Feel very revitalized
+              after spa treatments at Luxury Spa."
+            </p>
+            <h3>Rick Grimms</h3>
+            <label>Rick Grimms</label>
+          </div>
+          <div class="item">
+            <i class="fa-solid fa-quote-right"></i>
+            <p>
+              " I am blessed to be here in Edukrom, Koforidua staying at The
+              Luxury Hotel. The staff has been so kind, professional, friendly
+              and helpful. The hotel is beautiful, luxurious and clean. I have
+              made friends with the staff members, especially the gym trainer Mr
+              Adams and regulars in the gym!
+            </p>
+            <h3>Glenn Rhea</h3>
+            <label>Glenn Rhea</label>
+          </div>
+          <div class="item">
+            <i class="fa-solid fa-quote-right"></i>
+            <p>
+              "We could not have thought of a more beautiful and picturesque
+              property to spend a couple of days together right after our
+              wedding. Rohan of course will probably be one of the most
+              enthusiastic guests to have enjoyed boating in the beautiful lake
+              on multiple occasions. 
+            </p>
+            <h3>Daryl Dixon</h3>
+            <label>Julia Robertson</label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAROUSEL 2 -->
+    <script>
+      $(".owl-carousel2").owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: false,
+        dots: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          768: {
+            items: 1,
+          },
+          1000: {
+            items: 1,
+          },
+        },
+      });
+    </script>
+
+<section class="map top">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31739.884712223902!2d-0.2853755984982466!3d6.065055461653218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf6a808e1f4ded%3A0x99aadb13dad56b87!2sKoforidua%20Technical%20University!5e0!3m2!1sen!2sgh!4v1708984629000!5m2!1sen!2sgh" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/032d11eac3.js"
+      crossorigin="anonymous"
+    ></script>
+    
+    <script>
+//Search bar filtering codes
+// JavaScript for filtering the menu list and navlinks
+document.getElementById("searchBar").addEventListener("input", function () {
+  var searchText = this.value.toLowerCase(); // Convert input text to lowercase
+  var menuItems = document.querySelectorAll("#menulist li"); // Get all menu items
+
+  // Loop through each menu item and hide those that don't match the search text
+  menuItems.forEach(function (item) {
+    var menuItemText = item.textContent.toLowerCase(); // Convert menu item text to lowercase
+    if (menuItemText.includes(searchText)) {
+      item.style.display = "block"; // Display the menu item if it matches
+    } else {
+      item.style.display = "none"; // Hide the menu item if it doesn't match
+    }
+  });
+});
+
+
+
+// toggle codes
+var menulist = document.getElementById("menulist");
+menulist.style.maxHeight = "0px";
+
+function menutoggle() {
+  if (menulist.style.maxHeight == "0px") {
+    menulist.style.maxHeight = "100vh";
+  } else {
+    menulist.style.maxHeight = "0px";
+  }
+}
+
+
+//active links
+window.onload = function() {
+    // Your code here
+    let links = document.querySelectorAll(".navlinks a");
+    let bodyId = document.querySelector("body").id;
+
+    for (let link of links) {
+        if (link.dataset.active === bodyId) {
+            link.classList.add("active");
+        }
+    }
+};
+
+
+ 
+
+    </script>
+    <footer>
+      <div class="container top">
+        <!-- <div class="subscribe" id="contact">
+          <h2>Subscribe newsletter</h2>
+          <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div class="input flex">
+            <input type="email" placeholder="Your Email address">
+            <button class="flex1">
+              <span>Subscribe</span>
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div> -->
+  
+        <div class="content grid  top">
+          <div class="box">
+            <div class="logo">
+              <img src="" alt="">
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <div class="social flex">
+              <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-youtube"></i>
+            </div>
+          </div>
+  
+          <div class="box">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><i class="fas fa-angle-double-right"></i>Big Data</li>
+              <li><i class="fas fa-angle-double-right"></i>Wellness</li>
+              <li><i class="fas fa-angle-double-right"></i>Spa Gallery</li>
+              <li><i class="fas fa-angle-double-right"></i>Reservation</li>
+              <li><i class="fas fa-angle-double-right"></i>FAQ</li>
+              <li><i class="fas fa-angle-double-right"></i>Contact</li>
+            </ul>
+          </div>
+  
+          <div class="box">
+            <h2>Services</h2>
+            <ul>
+              <li><i class="fas fa-angle-double-right"></i>Restaurant</li>
+              <li><i class="fas fa-angle-double-right"></i>Swimming Pool</li>
+              <li><i class="fas fa-angle-double-right"></i>Wellness & Spa</li>
+              <li><i class="fas fa-angle-double-right"></i>Conference Room</li>
+              <li><i class="fas fa-angle-double-right"></i>Events</li>
+              <li><i class="fas fa-angle-double-right"></i>Adult Room</li>
+            </ul>
+          </div>
+  
+          <div class="box">
+            <h2>Services</h2>
+            <div class="icon flex">
+              <div class="i">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="text">
+                <h3>Address</h3>
+                <p>205 Fida Walinton, Tongo Street Front The USA</p>
+              </div>
+            </div>
+            <div class="icon flex">
+              <div class="i">
+                <i class="fas fa-phone" style=" transform: rotate(-90deg);"></i>
+              </div>
+              <div class="text">
+                <h3>Phone</h3>
+                <p>+123 456 7898</p>
+              </div>
+            </div>
+            <div class="icon flex">
+              <div class="i">
+                <i class="far fa-envelope"></i>
+              </div>
+              <div class="text">
+                <h3>Email</h3>
+                <p>hello@ecorik.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  </body>
+</html>
